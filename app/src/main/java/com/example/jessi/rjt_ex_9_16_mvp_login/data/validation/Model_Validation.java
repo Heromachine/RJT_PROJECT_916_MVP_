@@ -1,11 +1,11 @@
-package com.example.jessi.rjt_ex_9_16_mvp_login.uilogin;
+package com.example.jessi.rjt_ex_9_16_mvp_login.data.validation;
 
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
-public class Model_LogIn_Validation {
+public class Model_Validation {
 
-    public Model_LogIn_Validation() {
+    public Model_Validation() {
 
     }
     private static final String TAG = "|===========InputValidation: ";
@@ -19,7 +19,7 @@ public class Model_LogIn_Validation {
 
     int index = 0;
 
-    public Model_LogIn_Validation(final ArrayList<String> patterns, ArrayList<String> fieldnames)
+    public Model_Validation(final ArrayList<String> patterns, ArrayList<String> fieldnames)
     {
         PatternStrings = patterns;
         TextViewStrings = new ArrayList<>();
@@ -80,6 +80,7 @@ public class Model_LogIn_Validation {
         {
             if (FieldResults.get(i))
             {
+                ErrorMsg += "SUCCESS!";
                 continue;
             }
             else

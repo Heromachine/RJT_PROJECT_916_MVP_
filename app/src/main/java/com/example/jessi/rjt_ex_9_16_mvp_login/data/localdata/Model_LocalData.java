@@ -1,8 +1,7 @@
-package com.example.jessi.rjt_ex_9_16_mvp_login.data.validation;
+package com.example.jessi.rjt_ex_9_16_mvp_login.data.localdata;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 
 public class Model_LocalData
 {

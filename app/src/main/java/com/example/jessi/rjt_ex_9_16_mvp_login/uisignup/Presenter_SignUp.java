@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.jessi.rjt_ex_9_16_mvp_login.R;
-import com.example.jessi.rjt_ex_9_16_mvp_login.data.validation.Model_Validation;
+import com.example.jessi.rjt_ex_9_16_mvp_login.data.localdata.Model_Validation;
 
 import java.util.ArrayList;
 

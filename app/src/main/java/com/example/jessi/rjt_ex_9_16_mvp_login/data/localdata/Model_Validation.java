@@ -1,4 +1,4 @@
-package com.example.jessi.rjt_ex_9_16_mvp_login.data.validation;
+package com.example.jessi.rjt_ex_9_16_mvp_login.data.localdata;
 
 import java.util.ArrayList;
 import java.util.regex.Pattern;
@@ -31,10 +31,10 @@ public class Model_Validation {
         }
     }
 
-    private static final String USERNAME_PATTERN = "^[ A-Za-z0-9._-]{3,15}$";
-    private static final String PASSWORD_PATTERN = "^[A-Za-z0-9.-_!]{6,18}$";
-    private static final String EMAIL_PATTERN = "^[a-zA-Z0-9._-]{3,20}@[a-zA-Z0-9]{3,9}.com$";
-    private static final String DOB_PATTERN = "^(\\d{2}-?\\d{2}-?\\d{4})$";
+//    private static final String USERNAME_PATTERN = "^[ A-Za-z0-9._-]{3,15}$";
+//    private static final String PASSWORD_PATTERN = "^[A-Za-z0-9.-_!]{6,18}$";
+//    private static final String EMAIL_PATTERN = "^[a-zA-Z0-9._-]{3,20}@[a-zA-Z0-9]{3,9}.com$";
+//    private static final String DOB_PATTERN = "^(\\d{2}-?\\d{2}-?\\d{4})$";
 
 
 

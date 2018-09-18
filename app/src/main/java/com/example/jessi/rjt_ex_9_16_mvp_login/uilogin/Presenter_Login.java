@@ -3,13 +3,11 @@ package com.example.jessi.rjt_ex_9_16_mvp_login.uilogin;
 import android.content.Context;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Switch;
-import android.widget.Toast;
 
 import com.example.jessi.rjt_ex_9_16_mvp_login.R;
-import com.example.jessi.rjt_ex_9_16_mvp_login.data.validation.Model_LocalData;
-import com.example.jessi.rjt_ex_9_16_mvp_login.data.validation.Model_Validation;
+import com.example.jessi.rjt_ex_9_16_mvp_login.data.localdata.Model_LocalData;
+import com.example.jessi.rjt_ex_9_16_mvp_login.data.localdata.Model_Validation;
 
 import java.util.ArrayList;
 
@@ -28,6 +26,8 @@ public class Presenter_Login implements Presenter_IF_LogIn{
 
     private final ArrayList<String>  LOGINPATTERNS = new ArrayList<String>();
     private final ArrayList<String>  LOGINFEILDNAMES = new ArrayList<String>();
+
+
 
 
     public Presenter_Login(View_Login mainActivity) {
@@ -74,10 +74,10 @@ public class Presenter_Login implements Presenter_IF_LogIn{
                 }
 
                 this.MVL.addTextViewString(username);
-
                 this.MVL.addTextViewString(password);
                 break;
             case R.id.btn_signup:
+
                 break;
 
         }
@@ -102,7 +102,6 @@ public class Presenter_Login implements Presenter_IF_LogIn{
     @Override
     public void setPassWord(String password) {
         sPassword = password;
-
     }
 
 

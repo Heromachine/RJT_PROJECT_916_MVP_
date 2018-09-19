@@ -8,6 +8,7 @@ import android.widget.Switch;
 import com.example.jessi.rjt_ex_9_16_mvp_login.R;
 import com.example.jessi.rjt_ex_9_16_mvp_login.data.localdata.Model_LocalData;
 import com.example.jessi.rjt_ex_9_16_mvp_login.data.localdata.Model_Validation;
+import com.example.jessi.rjt_ex_9_16_mvp_login.uisignup.View_SignUp;
 
 import java.util.ArrayList;
 
@@ -23,6 +24,8 @@ public class Presenter_Login implements Presenter_IF_LogIn{
 
     String sUsername;
     String sPassword;
+
+    Context cntx;
 
     private final ArrayList<String>  LOGINPATTERNS = new ArrayList<String>();
     private final ArrayList<String>  LOGINFEILDNAMES = new ArrayList<String>();
@@ -50,6 +53,7 @@ public class Presenter_Login implements Presenter_IF_LogIn{
 
         this.MVL = new Model_Validation(LOGINPATTERNS, LOGINFEILDNAMES);
         VIL = mainActivity;
+        cntx = mainActivity;
     }
 
     @Override
@@ -77,6 +81,7 @@ public class Presenter_Login implements Presenter_IF_LogIn{
                 this.MVL.addTextViewString(password);
                 break;
             case R.id.btn_signup:
+                cntx.startActivity(context, View_SignUp.class);
 
                 break;
 

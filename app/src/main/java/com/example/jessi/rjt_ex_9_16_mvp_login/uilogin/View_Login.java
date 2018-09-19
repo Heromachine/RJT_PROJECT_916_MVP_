@@ -6,12 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.example.jessi.rjt_ex_9_16_mvp_login.R;
 import com.example.jessi.rjt_ex_9_16_mvp_login.uisignup.View_SignUp;
 
-public class View_Login extends AppCompatActivity implements View_Inter_Login{
+public class View_Login extends AppCompatActivity implements IViewLogin {
 
     Presenter_IF_LogIn iPresenter;
     EditText userName;

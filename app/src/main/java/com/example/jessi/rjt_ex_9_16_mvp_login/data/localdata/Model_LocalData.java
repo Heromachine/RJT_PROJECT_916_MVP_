@@ -28,6 +28,7 @@ public class Model_LocalData
 
     public boolean isSP(Context context, String table,  String item)
     {
+
         SharedPreferences SP = context.getSharedPreferences(table, Context.MODE_PRIVATE);
         return SP.contains(item);
     }

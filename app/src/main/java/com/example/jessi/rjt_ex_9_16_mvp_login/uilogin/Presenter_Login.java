@@ -1,6 +1,7 @@
 package com.example.jessi.rjt_ex_9_16_mvp_login.uilogin;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 import android.widget.Switch;
@@ -16,7 +17,8 @@ import java.util.ArrayList;
 public class Presenter_Login implements Presenter_IF_LogIn{
     private static final String TAG = "Presenter_Login";
 
-    View_Inter_Login VIL;
+    View_Login VL;
+    IViewLogin VIL;
     Model_Validation MVL;
     String error;
     Model_LocalData SP;
@@ -35,6 +37,8 @@ public class Presenter_Login implements Presenter_IF_LogIn{
 
     public Presenter_Login(View_Login mainActivity) {
         swchLogin = mainActivity.findViewById(R.id.swch_savecred);
+        VIL = mainActivity;
+        VL = mainActivity;
 
         SP = new Model_LocalData();
         SP.createSP(mainActivity, "LogInSP");
@@ -52,8 +56,7 @@ public class Presenter_Login implements Presenter_IF_LogIn{
         LOGINFEILDNAMES.add("Password:");
 
         this.MVL = new Model_Validation(LOGINPATTERNS, LOGINFEILDNAMES);
-        VIL = mainActivity;
-        cntx = mainActivity;
+
     }
 
     @Override
@@ -64,7 +67,7 @@ public class Presenter_Login implements Presenter_IF_LogIn{
             case R.id.btn_login:
                 if (swchLogin.isChecked())
                 {
-                    if (SP.isSP(context, "LogInSP", "username") && SP.isSP(context, "LogInSP","password")) {
+                    if (SP.isSP(cntx   , "LogInSP", "username") && SP.isSP(context, "LogInSP","password")) {
                         SP.addSP(context,"LogInSP","username", username);
                         SP.addSP(context,"LogInSP","password", password);
                     }
@@ -81,7 +84,8 @@ public class Presenter_Login implements Presenter_IF_LogIn{
                 this.MVL.addTextViewString(password);
                 break;
             case R.id.btn_signup:
-                cntx.startActivity(context, View_SignUp.class);
+                Intent i = new Intent(context, View_SignUp.class);
+                context.startActivity(i);
 
                 break;
 
